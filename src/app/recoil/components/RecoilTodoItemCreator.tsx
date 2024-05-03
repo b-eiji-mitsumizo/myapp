@@ -3,11 +3,6 @@ import { todoListState } from "@/app/recoil/atoms/todoState";
 import React, { useState } from "react";
 import { useSetRecoilState } from "recoil";
 
-let id = 0;
-function getId() {
-  return id++;
-}
-
 const RecoilTodoItemCreator = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const setTodoList = useSetRecoilState(todoListState);
