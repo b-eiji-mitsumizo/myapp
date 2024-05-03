@@ -1,3 +1,5 @@
+"use client";
+
 import TodoListFilter from "@/app/components/TodoListFilter";
 import { filterAtom } from "@/app/jotai/atoms/filterState";
 import { useAtom } from "jotai";

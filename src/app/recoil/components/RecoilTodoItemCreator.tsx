@@ -1,3 +1,5 @@
+"use client";
+
 import TodoItemCreator from "@/app/components/TodoItemCreator";
 import { todoListState } from "@/app/recoil/atoms/todoState";
 import React, { useState } from "react";

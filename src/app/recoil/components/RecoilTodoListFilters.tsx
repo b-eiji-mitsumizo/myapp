@@ -1,3 +1,5 @@
+"use client";
+
 import { todoListFilterState } from "@/app/recoil/atoms/filterState";
 import { useRecoilState } from "recoil";
 import TodoListFilter from "@/app/components/TodoListFilter";

@@ -1,7 +1,7 @@
 import Header from "@/app/components/Header";
 import React from "react";
 
-const page = () => {
+const ZustandPage = () => {
   return (
     <>
       <Header name="Zustand" />
@@ -9,4 +9,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ZustandPage;

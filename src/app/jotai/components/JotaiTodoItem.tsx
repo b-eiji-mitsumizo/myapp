@@ -1,3 +1,5 @@
+"use client";
+
 import TodoItem from "@/app/components/TodoItem";
 import { todosAtom } from "@/app/jotai/atoms/todoState";
 import { Todo } from "@/app/types/Todo";

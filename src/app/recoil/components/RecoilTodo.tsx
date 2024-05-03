@@ -1,3 +1,5 @@
+"use client";
+
 import RecoilTodoItem from "@/app/recoil/components/RecoilTodoItem";
 import RecoilTodoItemCreator from "@/app/recoil/components/RecoilTodoItemCreator";
 import RecoilTodoListFilters from "@/app/recoil/components/RecoilTodoListFilters";
@@ -21,9 +23,9 @@ const RecoilTodo = () => {
       <div className="max-h-96 overflow-y-auto my-10">
         <h2 className="text-2xl font-bold">Todo List</h2>
         <div className="flex flex-wrap -mx-2">
-          {todoList.map((todoItem) => (
-            <div className="w-full sm:w-1/2 md:w-1/3 px-2 my-2">
-              <RecoilTodoItem key={todoItem.id} item={todoItem} />
+          {todoList.map((todoItem, index) => (
+            <div className="w-full sm:w-1/2 md:w-1/3 px-2 my-2" key={index}>
+              <RecoilTodoItem item={todoItem} />
             </div>
           ))}
         </div>

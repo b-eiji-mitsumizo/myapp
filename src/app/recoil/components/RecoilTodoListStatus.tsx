@@ -1,3 +1,5 @@
+"use client";
+
 import TodoListStatus from "@/app/components/TodoListStatus";
 import { todoListStatsState } from "@/app/recoil/selectors/selector";
 import React from "react";

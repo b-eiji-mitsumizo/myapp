@@ -4,7 +4,7 @@ import Header from "@/app/components/Header";
 import JotaiTodo from "@/app/jotai/components/JotaiTodo";
 import React from "react";
 
-const page = () => {
+const JotaiPage = () => {
   return (
     <>
       <Header name="Jotai" />
@@ -13,4 +13,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default JotaiPage;

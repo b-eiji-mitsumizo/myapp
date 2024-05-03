@@ -1,3 +1,5 @@
+"use client";
+
 import { JotaiTodoItem } from "@/app/jotai/components/JotaiTodoItem";
 import JotaiTodoItemCreator from "@/app/jotai/components/JotaiTodoItemCreator";
 import { JotaiTodoListFilter } from "@/app/jotai/components/JotaiTodoListFilters";
