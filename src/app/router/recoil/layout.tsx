@@ -6,9 +6,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div>
-      <RecoilRoot>{children}</RecoilRoot>
-    </div>
-  );
+  return <RecoilRoot>{children}</RecoilRoot>;
 }

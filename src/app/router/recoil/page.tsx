@@ -13,7 +13,7 @@ const page = () => {
   const todoList: Todo[] = useRecoilValue(fileterdTodoListState);
 
   return (
-    <div className="pt-16">
+    <>
       <Header name="Recoil" />
       <div className="container mx-auto mt-10">
         <div className="shadow-lg w-1/3 mb-10 p-5">
@@ -34,7 +34,7 @@ const page = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
