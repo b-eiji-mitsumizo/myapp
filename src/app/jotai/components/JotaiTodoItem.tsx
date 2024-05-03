@@ -1,7 +1,7 @@
 import TodoItem from "@/app/components/TodoItem";
 import { todosAtom } from "@/app/jotai/atoms/todoState";
 import { Todo } from "@/app/types/Todo";
-import { PrimitiveAtom, atom, useAtom, useSetAtom } from "jotai";
+import { PrimitiveAtom, useAtom, useSetAtom } from "jotai";
 
 type TodoItemProps = {
   atom: PrimitiveAtom<Todo>;

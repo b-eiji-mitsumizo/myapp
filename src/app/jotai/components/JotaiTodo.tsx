@@ -3,12 +3,12 @@ import JotaiTodoItemCreator from "@/app/jotai/components/JotaiTodoItemCreator";
 import { JotaiTodoListFilter } from "@/app/jotai/components/JotaiTodoListFilters";
 import { JotaiTodoListStatus } from "@/app/jotai/components/JotaiTodoListStatus";
 import { fileterdTodoListState } from "@/app/jotai/selectors/todoFilterSelector";
-import { useAtom } from "jotai";
+import { useAtomValue } from "jotai";
 import React from "react";
 
 const JotaiTodo = () => {
   // 対象のフィルターでフィルタリングされたTODOリスト
-  const [todoList] = useAtom(fileterdTodoListState);
+  const todoList = useAtomValue(fileterdTodoListState);
 
   return (
     <div className="container mx-auto mt-10">
