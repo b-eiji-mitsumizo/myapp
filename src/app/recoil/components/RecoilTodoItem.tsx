@@ -33,7 +33,7 @@ const RecoilTodoItem = (props: TodoItemProps) => {
   }
 
   // タスクの削除
-  function deleteItem(event: React.MouseEvent<HTMLButtonElement>): void {
+  function deleteItem(): void {
     const newList = removeItemAtIndex(todoList, index);
     setTodoList(newList);
   }
