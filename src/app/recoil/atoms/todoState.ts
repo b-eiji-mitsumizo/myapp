@@ -1,3 +1,4 @@
+import { Todo } from "@/app/types/Todo";
 import { atom } from "recoil";
 
 // Todoリストの状態

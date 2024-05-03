@@ -1,4 +1,4 @@
-import { FilterState } from "@/app/recoil/types/FilterState";
+import { FilterState } from "@/app/types/FilterState";
 import { atom } from "recoil";
 
 // フィルターの状態

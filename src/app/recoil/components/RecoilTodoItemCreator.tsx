@@ -1,3 +1,4 @@
+import TodoItemCreator from "@/app/components/TodoItemCreator";
 import { todoListState } from "@/app/recoil/atoms/todoState";
 import React, { useState } from "react";
 import { useSetRecoilState } from "recoil";
@@ -7,7 +8,7 @@ function getId() {
   return id++;
 }
 
-const TodoItemCreator = () => {
+const RecoilTodoItemCreator = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const setTodoList = useSetRecoilState(todoListState);
 
@@ -28,24 +29,12 @@ const TodoItemCreator = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-start gap-5">
-      <input
-        type="text"
-        value={inputValue}
-        onChange={onChange}
-        className="p-3"
-      />
-      <button
-        className={`p-2 rounded-md ${
-          inputValue === "" ? "bg-gray-400" : "bg-lime-300 shadow-md"
-        }`}
-        disabled={inputValue === ""}
-        onClick={addItem}
-      >
-        Add
-      </button>
-    </div>
+    <TodoItemCreator
+      inputValue={inputValue}
+      onChange={onChange}
+      addItem={addItem}
+    />
   );
 };
 
-export default TodoItemCreator;
+export default RecoilTodoItemCreator;

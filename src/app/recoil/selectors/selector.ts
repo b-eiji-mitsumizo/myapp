@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { FilterState } from "@/app/recoil/types/FilterState";
+import { FilterState } from "@/app/types/FilterState";
 import { todoListFilterState } from "@/app/recoil/atoms/filterState";
 import { todoListState } from "@/app/recoil/atoms/todoState";
 

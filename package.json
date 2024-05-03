@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@next/font": "^14.2.3",
+    "@react-spring/web": "^9.7.3",
+    "antd": "^5.17.0",
+    "jotai": "^2.8.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
