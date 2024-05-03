@@ -36,7 +36,7 @@ export default function Home() {
                 </Link>
               </td>
             </tr>
-            <tr>
+            {/* <tr>
               <td className="border px-4 py-2">Zustand</td>
               <td className="border px-4 py-2">
                 <Link
@@ -55,7 +55,7 @@ export default function Home() {
                   Zustand Docs
                 </Link>
               </td>
-            </tr>
+            </tr> */}
             <tr>
               <td className="border px-4 py-2">Jotai</td>
               <td className="border px-4 py-2">
