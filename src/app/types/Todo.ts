@@ -1,6 +1,6 @@
 export type Todo = {
   // ID
-  id?: number;
+  id: number;
   // タイトル
   title: string;
   // Doneフラグ

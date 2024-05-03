@@ -6,21 +6,25 @@ type TodoItemCreatorProps = {
   addItem: () => void;
 };
 
-const TodoItemCreator = (props: TodoItemCreatorProps) => {
+const TodoItemCreator = ({
+  inputValue,
+  onChange,
+  addItem,
+}: TodoItemCreatorProps) => {
   return (
     <div className="flex flex-wrap justify-start gap-5">
       <input
         type="text"
-        value={props.inputValue}
-        onChange={props.onChange}
+        value={inputValue}
+        onChange={onChange}
         className="p-3"
       />
       <button
         className={`p-2 rounded-md ${
-          props.inputValue === "" ? "bg-gray-400" : "bg-lime-300 shadow-md"
+          inputValue === "" ? "bg-gray-400" : "bg-lime-300 shadow-md"
         }`}
-        disabled={props.inputValue === ""}
-        onClick={props.addItem}
+        disabled={inputValue === ""}
+        onClick={addItem}
       >
         Add
       </button>

@@ -4,7 +4,7 @@ import React from "react";
 type TodoItemProps = {
   item: Todo;
   toggleCompleted: () => void;
-  deleteItem: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  deleteItem: () => void;
 };
 
 const TodoItem = ({ item, toggleCompleted, deleteItem }: TodoItemProps) => {

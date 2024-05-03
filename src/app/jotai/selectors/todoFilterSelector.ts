@@ -1,12 +1,14 @@
-import { filterAtom, todosAtom } from "@/app/jotai/atoms/todoState";
-import { todoListFilterState } from "@/app/recoil/atoms/filterState";
-import { todoListState } from "@/app/recoil/atoms/todoState";
+import { filterAtom } from "@/app/jotai/atoms/filterState";
+import { todosAtom } from "@/app/jotai/atoms/todoState";
 import { FilterState } from "@/app/types/FilterState";
-import { atom } from "jotai";
+import { Todo } from "@/app/types/Todo";
+import { PrimitiveAtom, atom } from "jotai";
 
+// Todoリストの状態を計算するためのもの。(RecoilでいうSelector)
 export const todoListStatsAtom = atom((get) => {
   const todoList = get(todosAtom);
   const totalNum = todoList.length;
+
   const totalCompletedNum = todoList.filter(
     (todoAtom) => get(todoAtom).isComplete
   ).length;
@@ -22,16 +24,15 @@ export const todoListStatsAtom = atom((get) => {
   };
 });
 
-export const fileterdTodoListState = atom((get) => {
-  const fileter = get(filterAtom);
-  const list = get(todosAtom);
-
-  switch (fileter) {
-    case FilterState.SHOW_COMPLETED:
-      return list.filter((todoAtom) => get(todoAtom).isComplete);
-    case FilterState.SHOW_UNCOMPLETED:
-      return list.filter((todoAtom) => !get(todoAtom).isComplete);
-    default:
-      return list;
+// フィルターリングした結果のTodoリストを返却するためのもの
+export const fileterdTodoListState = atom<PrimitiveAtom<Todo>[]>((get) => {
+  const filter = get(filterAtom);
+  const todos = get(todosAtom);
+  if (filter === FilterState.SHOW_ALL) {
+    return todos;
+  } else if (filter === FilterState.SHOW_COMPLETED) {
+    return todos.filter((atom) => get(atom).isComplete);
+  } else {
+    return todos.filter((atom) => !get(atom).isComplete);
   }
 });

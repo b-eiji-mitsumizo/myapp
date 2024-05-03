@@ -6,16 +6,22 @@ import { PrimitiveAtom, atom, useAtom, useSetAtom } from "jotai";
 type TodoItemProps = {
   atom: PrimitiveAtom<Todo>;
 };
-
+// 各Todoアイテムを示す
 export const JotaiTodoItem = ({ atom }: TodoItemProps) => {
-  const [item, setItem] = useAtom(atom);
+  // 対象のTodo
+  const [item, setItem] = useAtom<Todo>(atom);
+  // Todoの全体のリスト
   const setTodos = useSetAtom(todosAtom); // atomに設定する
 
+  // Todoの状態を更新
   const toggleCompleted = () => {
+    // 対象Todoの完了フラグを逆にする。 itemはtodosAtomの一部であるため、itemが更新されれば、自動でtodoAtomsが変更される。
     setItem((oldItem) => ({ ...oldItem, isComplete: !oldItem.isComplete }));
   };
 
-  const deleteItem = (event: React.MouseEvent<HTMLButtonElement>) => {
+  // 対象のTodoをtodosAtomから削除する
+  const deleteItem = () => {
+    // 対象のTodo以外をtodosに設定する
     setTodos((prev) => prev.filter((item) => item !== atom));
   };
 

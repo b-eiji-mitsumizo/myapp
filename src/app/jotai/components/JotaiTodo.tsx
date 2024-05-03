@@ -7,6 +7,7 @@ import { useAtom } from "jotai";
 import React from "react";
 
 const JotaiTodo = () => {
+  // 対象のフィルターでフィルタリングされたTODOリスト
   const [todoList] = useAtom(fileterdTodoListState);
 
   return (
